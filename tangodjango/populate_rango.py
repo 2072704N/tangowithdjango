@@ -46,13 +46,13 @@ def populate():
         title="Flask",
         url="http://flask.pocoo.org")
 
-    2072704N = add_cat("2072704N",9001,9001)
+    studentid_cat = add_cat("2072704N",9001,9001)
 
-    add_page(cat=2072704N,
+    add_page(cat=studentid_cat,
              title="Github Page",
              url="https://github.com/2072704N")
 
-    add_page(cat=2072704N,
+    add_page(cat=studentid_cat,
              title="Python Anywhere page",
              url="https://www.pythonanywhere.com/user/2072704N/")
 
