@@ -44,13 +44,15 @@ def populate():
 
     add_page(cat=frame_cat,
         title="Flask",
-        url="http://flask.pocoo.org")
+        url="http://flask.pocoo.org",
+        views=10)
 
     studentid_cat = add_cat("2072704N",9001,9001)
 
     add_page(cat=studentid_cat,
              title="Github Page",
-             url="https://github.com/2072704N")
+             url="https://github.com/2072704N",
+             views=9001)
 
     add_page(cat=studentid_cat,
              title="Python Anywhere page",
