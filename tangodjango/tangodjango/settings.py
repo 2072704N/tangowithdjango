@@ -24,6 +24,10 @@ TEMPLATE_DIRS = [
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'rqn$*#ec)q1_m=p#(bmtlbr0m3*-p5+*b1$fat0-2u(+h+opig'
 
+LOGIN_URL = '/rango/login/'
+
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
