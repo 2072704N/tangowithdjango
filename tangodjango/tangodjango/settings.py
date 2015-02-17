@@ -62,6 +62,9 @@ ROOT_URLCONF = 'tangodjango.urls'
 
 WSGI_APPLICATION = 'tangodjango.wsgi.application'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+#cookies expire after 2 weeks
+SESSION_COOKIE_AGE = 1209600
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
