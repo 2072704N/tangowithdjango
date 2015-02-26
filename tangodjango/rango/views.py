@@ -7,6 +7,7 @@ from rango.forms import PageForm
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
+from rango.bing_search import run_query
 
 def index(request):
     category_list = Category.objects.all()
@@ -51,6 +52,19 @@ def about(request):
 
     #context_dict['visits'] = count
     return render(request,'rango/about.html',{'visits':count})
+
+def search(request):
+
+    result_list = []
+
+    if request.method == 'POST':
+        query = request.POST['query'].strip()
+
+        if query:
+            # Run our Bing function to get the results list!
+            result_list = run_query(query)
+
+    return render(request, 'rango/search.html', {'result_list': result_list})
 
 def category(request,category_name_slug):
    # Creates a context dictionary which we can pass to the template rendering engine
