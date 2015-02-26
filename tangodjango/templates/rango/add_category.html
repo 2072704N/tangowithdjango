@@ -4,8 +4,10 @@
 
 
 {% block body_block %}
+    <div class="page-header">
 		<form role="form"  id="category_form" method="post" action="/rango/add_category/">
 		<h2 class="form-signin-heading">Add a Category!</h2>
+    </div>
 
 
             {% csrf_token %}
