@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+{% if registered %}
+	<div>
+	<h3> Thanks for registering. </h3>
+	View your profile here: 
+	</div>
+{% else %}
+	<form role="form"  method="post" enctype="multipart/form-data" action=".">
+        {% csrf_token %}
+		<h2 class="form-signin-heading">Fill in your profile below!</h2>
+        {{ profile_form.as_p }}
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+{% endif %}
+{%endblock%}
