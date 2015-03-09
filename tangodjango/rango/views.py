@@ -249,7 +249,7 @@ def add_page(request, category_name_slug):
                 page.views = 0
                 page.save()
                 # probably better to use a redirect here.
-                return category(request, category_name_slug)
+                return index(request)
         else:
             print form.errors
     else:
